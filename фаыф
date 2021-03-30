@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        static double Cals(Double x)
+
+        {
+          return (Math.Exp(x) + Math.Exp(-x)) / (2);
+              
+        }
+        static void Main(string[] args)
+        {
+            double a = 0.3;
+            double b = 0.7;
+            double y = (Math.Exp(Cals(2*b)) - Cals(a)) * Math.Exp(Cals(2*b)) - Cals(a) / (Math.Sqrt(Cals(b) - Cals(a) + 9));
+            Console.WriteLine("y={0:F3}",y);
+                
+        }
+    }
+}
